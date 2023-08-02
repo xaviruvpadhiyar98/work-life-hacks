@@ -90,15 +90,13 @@ def split_list_with_overlap(lst, batch_size, overlap):
         start_idx += batch_size - overlap
     return result
 
-# Example usage:
-input_list = [i for i in range(100)]  # Replace this with your list
-batch_size = 30
+
+batch_size = 20
 overlap = 10
-batches = split_list_with_overlap(input_list, batch_size, overlap)
+batches = split_list_with_overlap(all_text, batch_size, overlap)
 
 # Display the batches
 for i, batch in enumerate(batches):
-    print(f"Batch {i+1}: {batch}")
-
+    print(f"Batch {i}: {''.join(batch)}")
 
 
